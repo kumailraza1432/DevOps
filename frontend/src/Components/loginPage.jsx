@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-
+  const navigate = useNavigate();
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -25,14 +25,12 @@ function LoginPage() {
 
     if (password === "") {
       setPasswordError("Password is required.");
-    } else if (password.length < 8) {
-      setPasswordError("Password must be at least 8 characters.");
     } else {
       setPasswordError("");
     }
 
-    if (username !== "" && password !== "" && password.length >= 8) {
-      // Form submission logic here
+    if (username == "admin" && password == "admin") {
+      navigate("/admin/add-product");
     }
   };
 
@@ -65,7 +63,7 @@ function LoginPage() {
             fontSize: "28px",
             fontWeight: "bold",
             color: "#333"
-        }}>One Stop Book Shop</h1>
+        }}>Mobile Shop</h1>
         <label 
           htmlFor="username" 
           style={{ 

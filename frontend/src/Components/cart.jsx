@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from './footer'
-import CustomNavbar from "./CustomNavbar";
+import CustomNavbar from "./CustomNavbarCustomer";
 import {Link, useLocation} from 'react-router-dom'
 function Cart() {
   const location = useLocation()

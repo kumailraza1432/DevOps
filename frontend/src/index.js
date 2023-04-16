@@ -19,17 +19,24 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<ProductListOwner />} />
+{/*       
         <Route path="/cart" element={<Cart />} />
-        <Route path='/productlist' element={<ProductList />}/>
-        <Route path="/add-product" element={<AddProduct />}/>
         <Route path="/cart" element={<Cart />} />
         <Route path="/orders" element={<OrderList />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/my-products" element={<ProductListOwner />} />
-      {/* ... etc. */}
+        <Route path="admin/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} /> */}
+      {/*
+      User
+        */}
+      <Route path='/' element={<ProductList />}/>
+      <Route path='/productlist' element={<ProductList />}/>
+      <Route path="/product/:id" element={<ProductDetail />} />
+      {/*
+      admin  
+      */} 
+      <Route path="/admin" element={<LoginPage />} />
+      <Route path="/admin/add-product" element={<AddProduct />}/>
+      <Route path="/admin/my-products" element={<ProductListOwner />} />
     </Route>
   )
 );

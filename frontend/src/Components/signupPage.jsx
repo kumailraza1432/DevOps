@@ -115,7 +115,7 @@ export default function SignupPage() {
             fontSize: "28px",
             fontWeight: "bold",
             color: "#333"
-        }}>One Stop Book Store</h1><img style={{width:'60%',height:100}} src='https://i.pinimg.com/originals/95/f8/58/95f8588d6469a16271ea2d2fad419d00.png'></img>
+        }}>Mobile Shop</h1><img style={{width:'60%',height:100}} src='https://i.pinimg.com/originals/95/f8/58/95f8588d6469a16271ea2d2fad419d00.png'></img>
         <label 
           htmlFor="username" 
           style={{ 

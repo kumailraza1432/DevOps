@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import CustomNavbar from './CustomNavbar';
+import Footer from './footer';
 
 function AddPhoneScreen() {
   const [phone, setPhone] = useState({
@@ -16,9 +18,9 @@ function AddPhoneScreen() {
   });
 
  const handleSubmit = async (event) => {
-   // const response = await fetch(" http://127.0.0.1/mobile/",phone);
+   // const response = await fetch("/mobile/",phone);
    // console.log(response);
-   const ok = fetch("http://127.0.0.1:8080/mobile/", {
+   const ok = fetch("/mobile/", {
      
     // Adding method type
     method: "POST",
@@ -66,129 +68,133 @@ console.log(ok)
   }
 
   return (
-    <div style={{width:'80%', height:'90vh',backgroundColor:'red',marginLeft:'10%',marginRight:'10%',marginTop:'5%',display:"flex",flexDirection:"column"}}>
+   <div>
+    <CustomNavbar />
+     <div style={{width:'80%',marginLeft:'10%',marginRight:'10%',display:"flex",flexDirection:"column",justifyContent:'space-evenly'}}>
       <h1>Add a new phone</h1>
         <label style={{width:'70%',fontSize:18}}>
-          Brand:
+          Brand:</label>
           <input
-           style={{marginLeft:30}}
+           style={{height:30}}
             type="text"
             name="brand"
             value={phone.brand}
             onChange={handleInputChange}
           />
-        </label>
+        
         <label>
           Model:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="model"
             value={phone.model}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Color:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="color"
             value={phone.color}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Camera:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="camera"
             value={phone.camera}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Ram:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="ram"
             value={phone.ram}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Image:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="image"
             value={phone.image}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Operating System:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="os"
             value={phone.os}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Price:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="price"
             value={phone.price}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Processor:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="processor"
             value={phone.processor}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Resolution:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="resolution"
             value={phone.resolution}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Screen Size:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="screenSize"
             value={phone.screenSize}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Storage Capacity:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="storageCapacity"
             value={phone.storageCapacity}
             onChange={handleInputChange}
           />
-        </label>
         <label>
           Battery Life:
-          <input
+        </label>
+          <input  style={{height:30}}
             type="text"
             name="battery"
             value={phone.battery}
             onChange={handleInputChange}
           />
-        </label>
-        <button onClick={()=>{handleSubmit()}}>Add Phone</button>
+        <button  style={{height:30, width:120,alignSelf:'center', margin:10, backgroundColor:'lightblue'}} onClick={()=>{handleSubmit()}}>Add Phone</button>
       
     </div>
+    <Footer />
+   </div>
   );
 }
 

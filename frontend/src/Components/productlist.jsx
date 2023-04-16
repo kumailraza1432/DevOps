@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from './footer'
-import CustomNavbar from "./CustomNavbar";
+import CustomNavbar from "./CustomNavbarCustomer";
 import {Link} from 'react-router-dom'
 import { BrowserRouter as Router, Switch, 
   Route, Redirect,useNavigate} from "react-router-dom";
@@ -11,7 +11,7 @@ function ProductCardList() {
   
   const navigate = useNavigate();
   async function getData(){
-    const response = await fetch("http://127.0.0.1:8080/mobile/");
+    const response = await fetch("/mobile/");
     console.log(response.body);
     const result = await response.json();
     setPhones(result)
